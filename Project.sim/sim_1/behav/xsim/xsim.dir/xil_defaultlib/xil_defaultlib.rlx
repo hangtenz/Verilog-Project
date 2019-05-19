@@ -1,0 +1,10 @@
+0.6
+2018.3
+Dec  7 2018
+00:33:28
+C:/Users/hangtenz/Desktop/Verilog-Project/Project.sim/sim_1/behav/xsim/glbl.v,1544155481,verilog,,,,glbl,,,,,,,,
+C:/Users/hangtenz/Desktop/Verilog-Project/Project.srcs/sim_1/new/tester.v,1558249646,verilog,,,,tester,,,,,,,,
+C:/Users/hangtenz/Desktop/Verilog-Project/Project.srcs/sources_1/new/Keyboard.v,1558186987,verilog,,C:/Users/hangtenz/Desktop/Verilog-Project/Project.srcs/sources_1/new/Main.v,,keyboard,,,,,,,,
+C:/Users/hangtenz/Desktop/Verilog-Project/Project.srcs/sources_1/new/Main.v,1558252910,verilog,,C:/Users/hangtenz/Desktop/Verilog-Project/Project.srcs/sources_1/new/Scor.v,,main,,,,,,,,
+C:/Users/hangtenz/Desktop/Verilog-Project/Project.srcs/sources_1/new/Scor.v,1558187269,verilog,,C:/Users/hangtenz/Desktop/Verilog-Project/Project.srcs/sources_1/new/VGA.v,,Afisaj;Mux;Scor;Selector,,,,,,,,
+C:/Users/hangtenz/Desktop/Verilog-Project/Project.srcs/sources_1/new/VGA.v,1558252134,verilog,,C:/Users/hangtenz/Desktop/Verilog-Project/Project.srcs/sim_1/new/tester.v,,vga_sync;vga_test,,,,,,,,

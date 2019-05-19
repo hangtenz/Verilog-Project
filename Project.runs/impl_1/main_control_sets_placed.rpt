@@ -1,0 +1,97 @@
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
+| Date         : Sun May 19 20:05:14 2019
+| Host         : DESKTOP-1RFDK3J running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file main_control_sets_placed.rpt
+| Design       : main
+| Device       : xc7a35t
+------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Number of unique control sets                            |    26 |
+| Unused register locations in slices containing registers |   121 |
++----------------------------------------------------------+-------+
+
+
+2. Histogram
+------------
+
++--------+--------------+
+| Fanout | Control Sets |
++--------+--------------+
+|      1 |            9 |
+|      2 |            1 |
+|      3 |            1 |
+|      4 |            5 |
+|      6 |            6 |
+|      8 |            1 |
+|     10 |            2 |
+|    16+ |            1 |
++--------+--------------+
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |              39 |           19 |
+| No           | No                    | Yes                    |               4 |            3 |
+| No           | Yes                   | No                     |               0 |            0 |
+| Yes          | No                    | No                     |              23 |           12 |
+| Yes          | No                    | Yes                    |              20 |           10 |
+| Yes          | Yes                   | No                     |              49 |           16 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++------------------+---------------------------------------+-------------------------------------+------------------+----------------+
+|   Clock Signal   |             Enable Signal             |           Set/Reset Signal          | Slice Load Count | Bel Load Count |
++------------------+---------------------------------------+-------------------------------------+------------------+----------------+
+|  clock_IBUF_BUFG | lcd/FSM_sequential_states_reg[0]_2    | lcd/FSM_sequential_states_reg[1]_10 |                1 |              1 |
+| ~keyb/clock_new  | keyb/tasta[2]_i_1_n_0                 |                                     |                1 |              1 |
+| ~keyb/clock_new  | keyb/tasta[3]_i_1_n_0                 |                                     |                1 |              1 |
+| ~keyb/clock_new  | keyb/tasta[0]_i_1_n_0                 |                                     |                1 |              1 |
+| ~keyb/clock_new  | keyb/tasta[5]_i_1_n_0                 |                                     |                1 |              1 |
+| ~keyb/clock_new  | keyb/tasta[7]_i_1_n_0                 |                                     |                1 |              1 |
+| ~keyb/clock_new  | keyb/tasta[6]_i_1_n_0                 |                                     |                1 |              1 |
+| ~keyb/clock_new  | keyb/tasta[1]_i_1_n_0                 |                                     |                1 |              1 |
+| ~keyb/clock_new  | keyb/tasta[4]_i_1_n_0                 |                                     |                1 |              1 |
+| ~keyb/clock_new  |                                       |                                     |                2 |              2 |
+|  clock_IBUF_BUFG | lcd/FSM_sequential_states_reg[0]_2    |                                     |                1 |              3 |
+|  clock_IBUF_BUFG |                                       | reset_IBUF                          |                3 |              4 |
+|  clock_IBUF_BUFG | lcd/FSM_sequential_states_reg[0]_5    | lcd/FSM_sequential_states_reg[1]_11 |                2 |              4 |
+|  clock_IBUF_BUFG | lcd/FSM_sequential_states_reg[1]_6[0] |                                     |                1 |              4 |
+|  clock_IBUF_BUFG | lcd/E[0]                              |                                     |                1 |              4 |
+| ~keyb/clock_new  | keyb/count                            |                                     |                1 |              4 |
+|  clock_IBUF_BUFG | lcd/FSM_sequential_states_reg[0]_4    | lcd/FSM_sequential_states_reg[0]_6  |                2 |              6 |
+|  clock_IBUF_BUFG | lcd/FSM_sequential_states_reg[1]_7    | lcd/FSM_sequential_states_reg[1]_13 |                2 |              6 |
+|  clock_IBUF_BUFG | lcd/FSM_sequential_states_reg[0]_1    | lcd/FSM_sequential_states_reg[1]_12 |                2 |              6 |
+|  clock_IBUF_BUFG | lcd/FSM_sequential_states_reg[0]_3    | lcd/FSM_sequential_states_reg[1]_13 |                2 |              6 |
+|  clock_IBUF_BUFG | lcd/v_count_reg_reg[9]_0[0]           | lcd/SR[1]                           |                2 |              6 |
+|  clock_IBUF_BUFG | lcd/v_count_reg_reg[9]_0[0]           | lcd/SR[0]                           |                1 |              6 |
+|  clock_IBUF_BUFG | keyb/done_reg_0                       | lcd/FSM_sequential_states_reg[1]    |                2 |              8 |
+|  clock_IBUF_BUFG | lcd/h_count_reg[9]_i_1_n_0            | reset_IBUF                          |                5 |             10 |
+|  clock_IBUF_BUFG | lcd/v_count_reg0                      | reset_IBUF                          |                5 |             10 |
+|  clock_IBUF_BUFG |                                       |                                     |               17 |             37 |
++------------------+---------------------------------------+-------------------------------------+------------------+----------------+
+
+

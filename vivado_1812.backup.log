@@ -1,0 +1,669 @@
+#-----------------------------------------------------------
+# Vivado v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Sun May 19 14:33:45 2019
+# Process ID: 1812
+# Current directory: C:/Users/hangtenz/Desktop/Verilog-Project
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent2540 C:\Users\hangtenz\Desktop\Verilog-Project\Project.xpr
+# Log file: C:/Users/hangtenz/Desktop/Verilog-Project/vivado.log
+# Journal file: C:/Users/hangtenz/Desktop/Verilog-Project\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/hangtenz/Desktop/Verilog-Project/Project.xpr
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Program/Vivado/2018.3/data/ip'.
+update_compile_order -fileset sources_1
+reset_run impl_1 -prev_step 
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+[Sun May 19 14:34:47 2019] Launched impl_1...
+Run output will be captured here: C:/Users/hangtenz/Desktop/Verilog-Project/Project.runs/impl_1/runme.log
+open_hw
+connect_hw_server
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-2222] Launching hw_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+****** Xilinx hw_server v2018.3
+  **** Build date : Dec  7 2018-00:40:27
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+
+open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210183AA12F0A
+set_property PROGRAM.FILE {C:/Users/hangtenz/Desktop/Verilog-Project/Project.runs/impl_1/main.bit} [get_hw_devices xc7a35t_0]
+current_hw_device [get_hw_devices xc7a35t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/hangtenz/Desktop/Verilog-Project/Project.runs/impl_1/main.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/hangtenz/Desktop/Verilog-Project/Project.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'tester' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/hangtenz/Desktop/Verilog-Project/Project.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj tester_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/hangtenz/Desktop/Verilog-Project/Project.srcs/sources_1/new/Keyboard.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module keyboard
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/hangtenz/Desktop/Verilog-Project/Project.srcs/sources_1/new/Main.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module main
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/hangtenz/Desktop/Verilog-Project/Project.srcs/sources_1/new/Scor.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Scor
+INFO: [VRFC 10-311] analyzing module Afisaj
+INFO: [VRFC 10-311] analyzing module Mux
+INFO: [VRFC 10-311] analyzing module Selector
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/hangtenz/Desktop/Verilog-Project/Project.srcs/sources_1/new/VGA.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module display
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/hangtenz/Desktop/Verilog-Project/Project.srcs/sim_1/new/tester.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tester
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/hangtenz/Desktop/Verilog-Project/Project.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.3
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: D:/Program/Vivado/2018.3/bin/unwrapped/win64.o/xelab.exe -wto a94cb1669219463793d23952e4145df1 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tester_behav xil_defaultlib.tester xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 1 for port 'enable' [C:/Users/hangtenz/Desktop/Verilog-Project/Project.srcs/sources_1/new/Main.v:90]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.keyboard
+Compiling module xil_defaultlib.display
+Compiling module xil_defaultlib.Afisaj
+Compiling module xil_defaultlib.Mux
+Compiling module xil_defaultlib.Selector
+Compiling module xil_defaultlib.Scor
+Compiling module xil_defaultlib.main
+Compiling module xil_defaultlib.tester
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tester_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/hangtenz/Desktop/Verilog-Project/Project.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tester_behav -key {Behavioral:sim_1:Functional:tester} -tclbatch {tester.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2018.3
+Time resolution is 1 ps
+source tester.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tester_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:04 ; elapsed = 00:00:06 . Memory (MB): peak = 1777.027 ; gain = 21.137
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/hangtenz/Desktop/Verilog-Project/Project.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'tester' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/hangtenz/Desktop/Verilog-Project/Project.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj tester_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/hangtenz/Desktop/Verilog-Project/Project.srcs/sources_1/new/Keyboard.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module keyboard
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/hangtenz/Desktop/Verilog-Project/Project.srcs/sources_1/new/Main.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module main
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/hangtenz/Desktop/Verilog-Project/Project.srcs/sources_1/new/Scor.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Scor
+INFO: [VRFC 10-311] analyzing module Afisaj
+INFO: [VRFC 10-311] analyzing module Mux
+INFO: [VRFC 10-311] analyzing module Selector
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/hangtenz/Desktop/Verilog-Project/Project.srcs/sources_1/new/VGA.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module display
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/hangtenz/Desktop/Verilog-Project/Project.srcs/sim_1/new/tester.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tester
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/hangtenz/Desktop/Verilog-Project/Project.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.3
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: D:/Program/Vivado/2018.3/bin/unwrapped/win64.o/xelab.exe -wto a94cb1669219463793d23952e4145df1 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tester_behav xil_defaultlib.tester xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 1 for port 'enable' [C:/Users/hangtenz/Desktop/Verilog-Project/Project.srcs/sources_1/new/Main.v:90]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.keyboard
+Compiling module xil_defaultlib.display
+Compiling module xil_defaultlib.Afisaj
+Compiling module xil_defaultlib.Mux
+Compiling module xil_defaultlib.Selector
+Compiling module xil_defaultlib.Scor
+Compiling module xil_defaultlib.main
+Compiling module xil_defaultlib.tester
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tester_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/hangtenz/Desktop/Verilog-Project/Project.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tester_behav -key {Behavioral:sim_1:Functional:tester} -tclbatch {tester.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2018.3
+Time resolution is 1 ps
+source tester.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tester_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:02 ; elapsed = 00:00:05 . Memory (MB): peak = 1854.965 ; gain = 4.645
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/hangtenz/Desktop/Verilog-Project/Project.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'tester' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/hangtenz/Desktop/Verilog-Project/Project.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj tester_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/hangtenz/Desktop/Verilog-Project/Project.srcs/sources_1/new/Keyboard.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module keyboard
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/hangtenz/Desktop/Verilog-Project/Project.srcs/sources_1/new/Main.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module main
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/hangtenz/Desktop/Verilog-Project/Project.srcs/sources_1/new/Scor.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Scor
+INFO: [VRFC 10-311] analyzing module Afisaj
+INFO: [VRFC 10-311] analyzing module Mux
+INFO: [VRFC 10-311] analyzing module Selector
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/hangtenz/Desktop/Verilog-Project/Project.srcs/sources_1/new/VGA.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module display
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/hangtenz/Desktop/Verilog-Project/Project.srcs/sim_1/new/tester.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tester
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/hangtenz/Desktop/Verilog-Project/Project.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.3
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: D:/Program/Vivado/2018.3/bin/unwrapped/win64.o/xelab.exe -wto a94cb1669219463793d23952e4145df1 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tester_behav xil_defaultlib.tester xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 1 for port 'enable' [C:/Users/hangtenz/Desktop/Verilog-Project/Project.srcs/sources_1/new/Main.v:90]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.keyboard
+Compiling module xil_defaultlib.display
+Compiling module xil_defaultlib.Afisaj
+Compiling module xil_defaultlib.Mux
+Compiling module xil_defaultlib.Selector
+Compiling module xil_defaultlib.Scor
+Compiling module xil_defaultlib.main
+Compiling module xil_defaultlib.tester
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tester_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/hangtenz/Desktop/Verilog-Project/Project.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tester_behav -key {Behavioral:sim_1:Functional:tester} -tclbatch {tester.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2018.3
+Time resolution is 1 ps
+source tester.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tester_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/hangtenz/Desktop/Verilog-Project/Project.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'tester' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/hangtenz/Desktop/Verilog-Project/Project.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj tester_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/hangtenz/Desktop/Verilog-Project/Project.srcs/sources_1/new/Keyboard.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module keyboard
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/hangtenz/Desktop/Verilog-Project/Project.srcs/sources_1/new/Main.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module main
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/hangtenz/Desktop/Verilog-Project/Project.srcs/sources_1/new/Scor.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Scor
+INFO: [VRFC 10-311] analyzing module Afisaj
+INFO: [VRFC 10-311] analyzing module Mux
+INFO: [VRFC 10-311] analyzing module Selector
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/hangtenz/Desktop/Verilog-Project/Project.srcs/sources_1/new/VGA.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module display
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/hangtenz/Desktop/Verilog-Project/Project.srcs/sim_1/new/tester.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tester
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/hangtenz/Desktop/Verilog-Project/Project.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.3
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: D:/Program/Vivado/2018.3/bin/unwrapped/win64.o/xelab.exe -wto a94cb1669219463793d23952e4145df1 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tester_behav xil_defaultlib.tester xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 1 for port 'enable' [C:/Users/hangtenz/Desktop/Verilog-Project/Project.srcs/sources_1/new/Main.v:90]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.keyboard
+Compiling module xil_defaultlib.display
+Compiling module xil_defaultlib.Afisaj
+Compiling module xil_defaultlib.Mux
+Compiling module xil_defaultlib.Selector
+Compiling module xil_defaultlib.Scor
+Compiling module xil_defaultlib.main
+Compiling module xil_defaultlib.tester
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tester_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/hangtenz/Desktop/Verilog-Project/Project.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tester_behav -key {Behavioral:sim_1:Functional:tester} -tclbatch {tester.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2018.3
+Time resolution is 1 ps
+source tester.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tester_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Users/hangtenz/Desktop/Verilog-Project/Project.runs/synth_1
+
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+[Sun May 19 14:49:40 2019] Launched synth_1...
+Run output will be captured here: C:/Users/hangtenz/Desktop/Verilog-Project/Project.runs/synth_1/runme.log
+[Sun May 19 14:49:40 2019] Launched impl_1...
+Run output will be captured here: C:/Users/hangtenz/Desktop/Verilog-Project/Project.runs/impl_1/runme.log
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Users/hangtenz/Desktop/Verilog-Project/Project.runs/synth_1
+
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+[Sun May 19 14:51:38 2019] Launched synth_1...
+Run output will be captured here: C:/Users/hangtenz/Desktop/Verilog-Project/Project.runs/synth_1/runme.log
+[Sun May 19 14:51:38 2019] Launched impl_1...
+Run output will be captured here: C:/Users/hangtenz/Desktop/Verilog-Project/Project.runs/impl_1/runme.log
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/hangtenz/Desktop/Verilog-Project/Project.runs/impl_1/main.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+update_compile_order -fileset sources_1
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/hangtenz/Desktop/Verilog-Project/Project.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'tester' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/hangtenz/Desktop/Verilog-Project/Project.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj tester_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/hangtenz/Desktop/Verilog-Project/Project.srcs/sources_1/new/Keyboard.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module keyboard
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/hangtenz/Desktop/Verilog-Project/Project.srcs/sources_1/new/Main.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module main
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/hangtenz/Desktop/Verilog-Project/Project.srcs/sources_1/new/Scor.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Scor
+INFO: [VRFC 10-311] analyzing module Afisaj
+INFO: [VRFC 10-311] analyzing module Mux
+INFO: [VRFC 10-311] analyzing module Selector
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/hangtenz/Desktop/Verilog-Project/Project.srcs/sim_1/new/tester.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tester
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/hangtenz/Desktop/Verilog-Project/Project.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.3
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: D:/Program/Vivado/2018.3/bin/unwrapped/win64.o/xelab.exe -wto a94cb1669219463793d23952e4145df1 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tester_behav xil_defaultlib.tester xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+ERROR: [VRFC 10-3180] cannot find port 'y' on this module [C:/Users/hangtenz/Desktop/Verilog-Project/Project.srcs/sources_1/new/Main.v:88]
+ERROR: [XSIM 43-3322] Static elaboration of top level Verilog design unit(s) in library work failed.
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-99] Step results log file:'C:/Users/hangtenz/Desktop/Verilog-Project/Project.sim/sim_1/behav/xsim/elaborate.log'
+ERROR: [USF-XSim-62] 'elaborate' step failed with error(s). Please check the Tcl console output or 'C:/Users/hangtenz/Desktop/Verilog-Project/Project.sim/sim_1/behav/xsim/elaborate.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/hangtenz/Desktop/Verilog-Project/Project.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'tester' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/hangtenz/Desktop/Verilog-Project/Project.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj tester_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/hangtenz/Desktop/Verilog-Project/Project.srcs/sources_1/new/Keyboard.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module keyboard
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/hangtenz/Desktop/Verilog-Project/Project.srcs/sources_1/new/Main.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module main
+INFO: [VRFC 10-2458] undeclared symbol x, assumed default net type wire [C:/Users/hangtenz/Desktop/Verilog-Project/Project.srcs/sources_1/new/Main.v:88]
+INFO: [VRFC 10-2458] undeclared symbol y, assumed default net type wire [C:/Users/hangtenz/Desktop/Verilog-Project/Project.srcs/sources_1/new/Main.v:88]
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/hangtenz/Desktop/Verilog-Project/Project.srcs/sources_1/new/Scor.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Scor
+INFO: [VRFC 10-311] analyzing module Afisaj
+INFO: [VRFC 10-311] analyzing module Mux
+INFO: [VRFC 10-311] analyzing module Selector
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/hangtenz/Desktop/Verilog-Project/Project.srcs/sim_1/new/tester.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tester
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/hangtenz/Desktop/Verilog-Project/Project.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.3
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: D:/Program/Vivado/2018.3/bin/unwrapped/win64.o/xelab.exe -wto a94cb1669219463793d23952e4145df1 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tester_behav xil_defaultlib.tester xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+ERROR: [VRFC 10-3180] cannot find port 'p_tick' on this module [C:/Users/hangtenz/Desktop/Verilog-Project/Project.srcs/sources_1/new/Main.v:88]
+ERROR: [XSIM 43-3322] Static elaboration of top level Verilog design unit(s) in library work failed.
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+INFO: [USF-XSim-99] Step results log file:'C:/Users/hangtenz/Desktop/Verilog-Project/Project.sim/sim_1/behav/xsim/elaborate.log'
+ERROR: [USF-XSim-62] 'elaborate' step failed with error(s). Please check the Tcl console output or 'C:/Users/hangtenz/Desktop/Verilog-Project/Project.sim/sim_1/behav/xsim/elaborate.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/hangtenz/Desktop/Verilog-Project/Project.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'tester' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/hangtenz/Desktop/Verilog-Project/Project.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj tester_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/hangtenz/Desktop/Verilog-Project/Project.srcs/sources_1/new/Keyboard.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module keyboard
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/hangtenz/Desktop/Verilog-Project/Project.srcs/sources_1/new/Main.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module main
+INFO: [VRFC 10-2458] undeclared symbol x, assumed default net type wire [C:/Users/hangtenz/Desktop/Verilog-Project/Project.srcs/sources_1/new/Main.v:88]
+INFO: [VRFC 10-2458] undeclared symbol y, assumed default net type wire [C:/Users/hangtenz/Desktop/Verilog-Project/Project.srcs/sources_1/new/Main.v:88]
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/hangtenz/Desktop/Verilog-Project/Project.srcs/sources_1/new/Scor.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Scor
+INFO: [VRFC 10-311] analyzing module Afisaj
+INFO: [VRFC 10-311] analyzing module Mux
+INFO: [VRFC 10-311] analyzing module Selector
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/hangtenz/Desktop/Verilog-Project/Project.srcs/sources_1/new/VGA.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module vga_sync
+INFO: [VRFC 10-311] analyzing module vga_test
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/hangtenz/Desktop/Verilog-Project/Project.srcs/sim_1/new/tester.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tester
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/hangtenz/Desktop/Verilog-Project/Project.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.3
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: D:/Program/Vivado/2018.3/bin/unwrapped/win64.o/xelab.exe -wto a94cb1669219463793d23952e4145df1 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tester_behav xil_defaultlib.tester xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+ERROR: [VRFC 10-3180] cannot find port 'y_out' on this module [C:/Users/hangtenz/Desktop/Verilog-Project/Project.srcs/sources_1/new/Main.v:88]
+ERROR: [XSIM 43-3322] Static elaboration of top level Verilog design unit(s) in library work failed.
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+INFO: [USF-XSim-99] Step results log file:'C:/Users/hangtenz/Desktop/Verilog-Project/Project.sim/sim_1/behav/xsim/elaborate.log'
+ERROR: [USF-XSim-62] 'elaborate' step failed with error(s). Please check the Tcl console output or 'C:/Users/hangtenz/Desktop/Verilog-Project/Project.sim/sim_1/behav/xsim/elaborate.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+update_compile_order -fileset sources_1
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/hangtenz/Desktop/Verilog-Project/Project.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'tester' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/hangtenz/Desktop/Verilog-Project/Project.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj tester_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/hangtenz/Desktop/Verilog-Project/Project.srcs/sources_1/new/Keyboard.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module keyboard
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/hangtenz/Desktop/Verilog-Project/Project.srcs/sources_1/new/Main.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module main
+INFO: [VRFC 10-2458] undeclared symbol x, assumed default net type wire [C:/Users/hangtenz/Desktop/Verilog-Project/Project.srcs/sources_1/new/Main.v:88]
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/hangtenz/Desktop/Verilog-Project/Project.srcs/sources_1/new/Scor.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Scor
+INFO: [VRFC 10-311] analyzing module Afisaj
+INFO: [VRFC 10-311] analyzing module Mux
+INFO: [VRFC 10-311] analyzing module Selector
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/hangtenz/Desktop/Verilog-Project/Project.srcs/sources_1/new/VGA.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module vga_sync
+INFO: [VRFC 10-311] analyzing module vga_test
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/hangtenz/Desktop/Verilog-Project/Project.srcs/sim_1/new/tester.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tester
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/hangtenz/Desktop/Verilog-Project/Project.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.3
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: D:/Program/Vivado/2018.3/bin/unwrapped/win64.o/xelab.exe -wto a94cb1669219463793d23952e4145df1 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tester_behav xil_defaultlib.tester xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+ERROR: [VRFC 10-3180] cannot find port 'x_out' on this module [C:/Users/hangtenz/Desktop/Verilog-Project/Project.srcs/sources_1/new/Main.v:88]
+ERROR: [XSIM 43-3322] Static elaboration of top level Verilog design unit(s) in library work failed.
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+INFO: [USF-XSim-99] Step results log file:'C:/Users/hangtenz/Desktop/Verilog-Project/Project.sim/sim_1/behav/xsim/elaborate.log'
+ERROR: [USF-XSim-62] 'elaborate' step failed with error(s). Please check the Tcl console output or 'C:/Users/hangtenz/Desktop/Verilog-Project/Project.sim/sim_1/behav/xsim/elaborate.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/hangtenz/Desktop/Verilog-Project/Project.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'tester' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/hangtenz/Desktop/Verilog-Project/Project.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj tester_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/hangtenz/Desktop/Verilog-Project/Project.srcs/sources_1/new/Keyboard.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module keyboard
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/hangtenz/Desktop/Verilog-Project/Project.srcs/sources_1/new/Main.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module main
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/hangtenz/Desktop/Verilog-Project/Project.srcs/sources_1/new/Scor.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Scor
+INFO: [VRFC 10-311] analyzing module Afisaj
+INFO: [VRFC 10-311] analyzing module Mux
+INFO: [VRFC 10-311] analyzing module Selector
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/hangtenz/Desktop/Verilog-Project/Project.srcs/sources_1/new/VGA.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module vga_sync
+INFO: [VRFC 10-311] analyzing module vga_test
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/hangtenz/Desktop/Verilog-Project/Project.srcs/sim_1/new/tester.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tester
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/hangtenz/Desktop/Verilog-Project/Project.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.3
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: D:/Program/Vivado/2018.3/bin/unwrapped/win64.o/xelab.exe -wto a94cb1669219463793d23952e4145df1 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tester_behav xil_defaultlib.tester xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+ERROR: [VRFC 10-3180] cannot find port 'clock' on this module [C:/Users/hangtenz/Desktop/Verilog-Project/Project.srcs/sources_1/new/Main.v:88]
+ERROR: [XSIM 43-3322] Static elaboration of top level Verilog design unit(s) in library work failed.
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+INFO: [USF-XSim-99] Step results log file:'C:/Users/hangtenz/Desktop/Verilog-Project/Project.sim/sim_1/behav/xsim/elaborate.log'
+ERROR: [USF-XSim-62] 'elaborate' step failed with error(s). Please check the Tcl console output or 'C:/Users/hangtenz/Desktop/Verilog-Project/Project.sim/sim_1/behav/xsim/elaborate.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/hangtenz/Desktop/Verilog-Project/Project.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'tester' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/hangtenz/Desktop/Verilog-Project/Project.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj tester_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/hangtenz/Desktop/Verilog-Project/Project.srcs/sources_1/new/Keyboard.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module keyboard
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/hangtenz/Desktop/Verilog-Project/Project.srcs/sources_1/new/Main.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module main
+INFO: [VRFC 10-2458] undeclared symbol clk, assumed default net type wire [C:/Users/hangtenz/Desktop/Verilog-Project/Project.srcs/sources_1/new/Main.v:88]
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/hangtenz/Desktop/Verilog-Project/Project.srcs/sources_1/new/Scor.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Scor
+INFO: [VRFC 10-311] analyzing module Afisaj
+INFO: [VRFC 10-311] analyzing module Mux
+INFO: [VRFC 10-311] analyzing module Selector
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/hangtenz/Desktop/Verilog-Project/Project.srcs/sources_1/new/VGA.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module vga_sync
+INFO: [VRFC 10-311] analyzing module vga_test
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/hangtenz/Desktop/Verilog-Project/Project.srcs/sim_1/new/tester.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tester
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/hangtenz/Desktop/Verilog-Project/Project.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.3
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: D:/Program/Vivado/2018.3/bin/unwrapped/win64.o/xelab.exe -wto a94cb1669219463793d23952e4145df1 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tester_behav xil_defaultlib.tester xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+ERROR: [VRFC 10-3180] cannot find port 'clock' on this module [C:/Users/hangtenz/Desktop/Verilog-Project/Project.srcs/sources_1/new/Main.v:88]
+ERROR: [XSIM 43-3322] Static elaboration of top level Verilog design unit(s) in library work failed.
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+INFO: [USF-XSim-99] Step results log file:'C:/Users/hangtenz/Desktop/Verilog-Project/Project.sim/sim_1/behav/xsim/elaborate.log'
+ERROR: [USF-XSim-62] 'elaborate' step failed with error(s). Please check the Tcl console output or 'C:/Users/hangtenz/Desktop/Verilog-Project/Project.sim/sim_1/behav/xsim/elaborate.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/hangtenz/Desktop/Verilog-Project/Project.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'tester' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/hangtenz/Desktop/Verilog-Project/Project.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj tester_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/hangtenz/Desktop/Verilog-Project/Project.srcs/sources_1/new/Keyboard.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module keyboard
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/hangtenz/Desktop/Verilog-Project/Project.srcs/sources_1/new/Main.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module main
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/hangtenz/Desktop/Verilog-Project/Project.srcs/sources_1/new/Scor.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Scor
+INFO: [VRFC 10-311] analyzing module Afisaj
+INFO: [VRFC 10-311] analyzing module Mux
+INFO: [VRFC 10-311] analyzing module Selector
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/hangtenz/Desktop/Verilog-Project/Project.srcs/sources_1/new/VGA.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module vga_sync
+INFO: [VRFC 10-311] analyzing module vga_test
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/hangtenz/Desktop/Verilog-Project/Project.srcs/sim_1/new/tester.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tester
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/hangtenz/Desktop/Verilog-Project/Project.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.3
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: D:/Program/Vivado/2018.3/bin/unwrapped/win64.o/xelab.exe -wto a94cb1669219463793d23952e4145df1 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tester_behav xil_defaultlib.tester xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 1 for port 'enable' [C:/Users/hangtenz/Desktop/Verilog-Project/Project.srcs/sources_1/new/Main.v:90]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.keyboard
+Compiling module xil_defaultlib.vga_sync_default
+Compiling module xil_defaultlib.Afisaj
+Compiling module xil_defaultlib.Mux
+Compiling module xil_defaultlib.Selector
+Compiling module xil_defaultlib.Scor
+Compiling module xil_defaultlib.main
+Compiling module xil_defaultlib.tester
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tester_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/hangtenz/Desktop/Verilog-Project/Project.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tester_behav -key {Behavioral:sim_1:Functional:tester} -tclbatch {tester.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2018.3
+Time resolution is 1 ps
+source tester.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tester_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Users/hangtenz/Desktop/Verilog-Project/Project.runs/synth_1
+
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+[Sun May 19 15:02:16 2019] Launched synth_1...
+Run output will be captured here: C:/Users/hangtenz/Desktop/Verilog-Project/Project.runs/synth_1/runme.log
+[Sun May 19 15:02:16 2019] Launched impl_1...
+Run output will be captured here: C:/Users/hangtenz/Desktop/Verilog-Project/Project.runs/impl_1/runme.log
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/hangtenz/Desktop/Verilog-Project/Project.runs/impl_1/main.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Digilent/210183AA12F0A
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210183AA12F0A
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtoolstcl 44-129] No matching hw_ila_data was found.
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+exit
+INFO: [Common 17-206] Exiting Vivado at Sun May 19 15:09:47 2019...
